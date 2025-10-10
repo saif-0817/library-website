@@ -1,0 +1,18 @@
+<div class="geners p-md-5 bg-body-tertiary">
+    <h2 class="fw-bold text-center">Browse Genres</h2>
+    <div class="container">
+  <div class="row g-4">
+    @for (genre of genres; track $index) {
+    <a (click)="onSerach(genre.link)" class="col-lg-3 col-6" role="button">
+      <div class="img-container">
+        <img [src]="genre.bookImg" class="img-thumbnail" [alt]="genre.genre">
+        <div class="gener d-flex align-items-center">
+          <p class="fw-bold py-4 w-100 text-uppercase">{{ genre.genre }}</p>
+        </div>
+      </div>
+    </a>
+    }
+  </div>
+</div>
+
+</div>

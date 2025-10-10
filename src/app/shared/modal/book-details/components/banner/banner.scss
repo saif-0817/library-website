@@ -1,0 +1,37 @@
+owl-carousel-o img {
+  width: 100%;
+  height: 400px; /* adjust as you like */
+  object-fit:inherit; /* keeps image proportions without stretching */
+
+}
+
+
+
+::ng-deep .owl-carousel {
+  position: relative;
+}
+
+::ng-deep .owl-nav {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+::ng-deep .owl-theme .owl-nav [class*=owl-] {
+    background:rgba(0, 0, 0, 0.318);
+   font-size: 1.5rem;
+ border-radius: 50%;
+
+}
+
+::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
+    background:white;
+color: black;
+   
+ 
+
+}

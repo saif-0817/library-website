@@ -1,0 +1,16 @@
+<section class="library-faq py-5 bg-body-tertiary">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4  text-uppercase">Frequently Asked Questions</h2>
+
+    <accordion [isAnimated]="true" class="rounded overflow-hidden">
+      <accordion-group
+        *ngFor="let faq of faqs"
+        [heading]="faq.question"
+        [isOpen]="faq.isOpen"
+        class="mb-2 border-0 rounded-3"
+      >
+        <p class="mb-0 text-secondary">{{ faq.answer }}</p>
+      </accordion-group>
+    </accordion>
+  </div>
+</section>

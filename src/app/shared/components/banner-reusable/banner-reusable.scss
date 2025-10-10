@@ -1,0 +1,31 @@
+.banner {
+  background-color: #e9f1dc;
+  background-image: url('../../../../../public/assets/images/main-banner.jpg');
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white; // text color for visibility
+
+  &::after {
+    content: ''; // required for pseudo-element
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // overlay
+    z-index: 1;
+  }
+
+  .customize-container {
+    max-width: 650px;
+    position: relative;
+    z-index: 2; // keeps content above overlay
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px;
+
+  }
+}

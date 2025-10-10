@@ -1,0 +1,17 @@
+::ng-deep .nav-link.active {
+  font-weight: 600;
+  border-bottom: 3px solid; /* added color for clarity */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+::ng-deep .header-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-bottom: 3px solid; /* same color for consistency */
+  }
+}

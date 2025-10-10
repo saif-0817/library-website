@@ -1,0 +1,18 @@
+<div class="books-section bg-body-tertiary py-5">
+  <h2 class="fw-bold text-center mb-2">OUR TEAM</h2>
+
+  <div class="container bg-body-white p-2">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let member of teamMembers">
+        <div class="card p-3 border-0 rounded-0  text-center h-100 ">
+          <img [src]="member.image" class="img-fluid  w-100" alt="{{member.name}}">
+          <div class="card-body h-100">
+            <h5 class="card-title fw-bold">{{member.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted fw-bold">{{member.role}}</h6>
+            <p class="card-text text-muted">{{member.description}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

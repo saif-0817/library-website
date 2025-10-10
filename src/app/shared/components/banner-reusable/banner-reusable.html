@@ -1,0 +1,10 @@
+<div class="banner py-5">
+    <div class="customize-container mx-auto text-center py-5 text-white">
+        <h1 class="fw-bold ">{{content.title}}</h1>
+        <h3>{{content.description}}</h3>
+        <div class="d-flex mt-4" role="search" *ngIf="searchBar">
+            <input class="form-control  rounded-end-0" type="search" placeholder="Search by title, author or ISBN" aria-label="Search" #value/>
+            <button class="btn btn-danger rounded-start-0" (click)="onSearch(value.value)">Search</button>
+        </div>
+    </div>
+</div>

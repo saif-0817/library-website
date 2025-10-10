@@ -1,0 +1,37 @@
+// .books-section{
+// background-color: #fcf6ed;
+// }
+
+::ng-deep .owl-carousel {
+  position: relative;
+}
+
+::ng-deep .owl-nav {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+::ng-deep .owl-theme .owl-nav [class*=owl-] {
+    background:black;
+   
+ 
+
+}
+
+::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
+    background:white;
+color: black;
+   
+ 
+
+}
+.card-title {
+  white-space: nowrap;       
+  overflow: hidden;         
+  text-overflow: ellipsis;   
+}
