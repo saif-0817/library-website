@@ -5,10 +5,11 @@ import { Facilities } from "./components/facilities/facilities";
 import { Teams } from "./components/teams/teams";
 import { Resources } from "./components/resources/resources";
 import { About as AboutUs } from './components/about/about';
+import { ServiceReusable } from "../../shared/components/service-reusable/service-reusable";
 
 @Component({
   selector: 'app-about-page',
-  imports: [Banner, Story, Facilities, Teams, Resources, AboutUs],
+  imports: [Banner, Story, Facilities, Teams, Resources, AboutUs, ServiceReusable],
   templateUrl: './about.html',
   styleUrl: './about.scss'
 })
