@@ -1,56 +1,201 @@
- <form class="row ">
+<accordion>
+    <accordion-group>
+        <button class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none" accordion-heading
+            type="button">
+            <div class="d-flex align-items-center"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
+            </svg> <span class="me-2"></span> FILTER</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill d-none" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </button>
+        <form class="row ">
             <div class="col-12">
                 <h3 class="fw-bold">Find Your Next Read</h3>
                 <p>Search across thousands of books in our library</p>
-                <div class="d-flex mt-4" role="search">
-                    <input class="form-control" type="search" placeholder="Search by title, author or ISBN"
-                        aria-label="Search" />
-                </div>
+
             </div>
             <div class="toggle-wrapper col-12 py-2 my-3 rounded-3 bg-white">
-                <div class="btn-group d-flex">
-                    <label class="btn btn-light" [(ngModel)]="radioModel" name="title" btnRadio="title" tabindex="0"
-                        role="button">Title</label>
-                    <label class="btn btn-light" [(ngModel)]="radioModel" name="author" btnRadio="author" tabindex="0"
-                        role="button">Author</label>
-                    <label class="btn btn-light" [(ngModel)]="radioModel" name="genre" btnRadio="genre" tabindex="0"
-                        role="button">Genre</label>
-                </div>
-            </div>
-            <div class="col-12 p-2">
-                <label for="languageList" class="form-label fw-bold">Language</label>
-                <input class="form-control" list="languageOptions" id="languageList" placeholder="Type to search...">
-                <datalist id="languageOptions">
-                    <option value="English">
-                    <option value="Hindi">
-                    <option value="French">
-                    <option value="Spanish">
-                    <option value="German">
-                </datalist>
-            </div>
 
-            <div class="col-12 p-2">
-                <label for="yearList" class="form-label fw-bold">Publication Year</label>
-                <input class="form-control" list="yearOptions" id="yearList" placeholder="Type to search...">
-                <datalist id="yearOptions">
-                    <option value="2025">
-                    <option value="2024">
-                    <option value="2023">
-                    <option value="2022">
-                    <option value="2021">
-                </datalist>
-            </div>
+                <tabset>
+                    <tab heading="Title" id="tab1">
+                        <div class="row">
+                            <div class="col-12 p-2">
+                                <div class="d-flex mt-4" role="search">
+                                    <input class="form-control" type="search"
+                                        placeholder="Type book Title in English or Bengali" aria-label="Search" />
+                                </div>
+                            </div>
+                            <div class="col-12 p-2">
+                                <label for="languageList" class="form-label fw-bold">Language</label>
+                                <input class="form-control" list="languageOptions" id="languageList"
+                                    placeholder="Type to search...">
+                                <datalist id="languageOptions">
+                                    <option value="English">
+                                    <option value="Hindi">
+                                    <option value="French">
+                                    <option value="Spanish">
+                                    <option value="German">
+                                </datalist>
+                            </div>
 
-            <div class="col-12 p-2">
-                <label for="publisherList" class="form-label fw-bold">Publisher</label>
-                <input class="form-control" list="publisherOptions" id="publisherList" placeholder="Type to search...">
-                <datalist id="publisherOptions">
-                    <option value="Penguin Random House">
-                    <option value="HarperCollins">
-                    <option value="Macmillan">
-                    <option value="Oxford University Press">
-                    <option value="Scholastic">
-                </datalist>
+                            <div class="col-12 p-2">
+                                <label for="yearList" class="form-label fw-bold">Publication Year</label>
+                                <input class="form-control" list="yearOptions" id="yearList"
+                                    placeholder="Type to search...">
+                                <datalist id="yearOptions">
+                                    <option value="2025">
+                                    <option value="2024">
+                                    <option value="2023">
+                                    <option value="2022">
+                                    <option value="2021">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="publisherList" class="form-label fw-bold">Publisher</label>
+                                <input class="form-control" list="publisherOptions" id="publisherList"
+                                    placeholder="Type to search...">
+                                <datalist id="publisherOptions">
+                                    <option value="Penguin Random House">
+                                    <option value="HarperCollins">
+                                    <option value="Macmillan">
+                                    <option value="Oxford University Press">
+                                    <option value="Scholastic">
+                                </datalist>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Author">
+                        <div class="row">
+                            <div class="col-12 p-2">
+                                <div class="d-flex mt-4" role="search">
+                                    <input class="form-control" type="search"
+                                        placeholder="Type book Author in English or Bengali" list="authorOptions"
+                                        aria-label="Search" />
+                                    <datalist id="authorOptions">
+                                        <option value="Rabindranath Tagore">
+                                        <option value="Satyajit Ray">
+                                        <option value="Arundhati Roy">
+                                        <option value="Jhumpa Lahiri">
+                                        <option value="Chetan Bhagat">
+                                        <option value="Kiran Desai">
+                                        <option value="R.K. Narayan">
+                                        <option value="Salman Rushdie">
+                                        <option value="Bankim Chandra Chattopadhyay">
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="authorLanguage" class="form-label fw-bold">Language</label>
+                                <input class="form-control" list="languageOptionsAuthor" id="authorLanguage"
+                                    placeholder="Type to search...">
+                                <datalist id="languageOptionsAuthor">
+                                    <option value="English">
+                                    <option value="Hindi">
+                                    <option value="Bengali">
+                                    <option value="French">
+                                    <option value="Spanish">
+                                    <option value="German">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="authorYear" class="form-label fw-bold">Publication Year</label>
+                                <input class="form-control" list="yearOptionsAuthor" id="authorYear"
+                                    placeholder="Type to search...">
+                                <datalist id="yearOptionsAuthor">
+                                    <option value="2025">
+                                    <option value="2024">
+                                    <option value="2023">
+                                    <option value="2022">
+                                    <option value="2021">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="authorPublisher" class="form-label fw-bold">Publisher</label>
+                                <input class="form-control" list="publisherOptionsAuthor" id="authorPublisher"
+                                    placeholder="Type to search...">
+                                <datalist id="publisherOptionsAuthor">
+                                    <option value="Penguin Random House">
+                                    <option value="HarperCollins">
+                                    <option value="Macmillan">
+                                    <option value="Oxford University Press">
+                                    <option value="Scholastic">
+                                </datalist>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Genre">
+                        <div class="row">
+                            <div class="col-12 p-2">
+                                <div class="d-flex mt-4" role="search">
+                                    <input class="form-control" type="search"
+                                        placeholder="Type book Genre in English or Bengali" list="genreOptions"
+                                        aria-label="Search" />
+                                    <datalist id="genreOptions">
+                                        <option value="Fiction">
+                                        <option value="Non-Fiction">
+                                        <option value="Science Fiction">
+                                        <option value="Fantasy">
+                                        <option value="Mystery">
+                                        <option value="Thriller">
+                                        <option value="Romance">
+                                        <option value="Historical">
+                                        <option value="Biography">
+                                        <option value="Self-Help">
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="genreLanguage" class="form-label fw-bold">Language</label>
+                                <input class="form-control" list="languageOptionsGenre" id="genreLanguage"
+                                    placeholder="Type to search...">
+                                <datalist id="languageOptionsGenre">
+                                    <option value="English">
+                                    <option value="Hindi">
+                                    <option value="Bengali">
+                                    <option value="French">
+                                    <option value="Spanish">
+                                    <option value="German">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="genreYear" class="form-label fw-bold">Publication Year</label>
+                                <input class="form-control" list="yearOptionsGenre" id="genreYear"
+                                    placeholder="Type to search...">
+                                <datalist id="yearOptionsGenre">
+                                    <option value="2025">
+                                    <option value="2024">
+                                    <option value="2023">
+                                    <option value="2022">
+                                    <option value="2021">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 p-2">
+                                <label for="genrePublisher" class="form-label fw-bold">Publisher</label>
+                                <input class="form-control" list="publisherOptionsGenre" id="genrePublisher"
+                                    placeholder="Type to search...">
+                                <datalist id="publisherOptionsGenre">
+                                    <option value="Penguin Random House">
+                                    <option value="HarperCollins">
+                                    <option value="Macmillan">
+                                    <option value="Oxford University Press">
+                                    <option value="Scholastic">
+                                </datalist>
+                            </div>
+                        </div>
+                    </tab>
+
+                </tabset>
             </div>
 
             <div class="col-12 p-2 d-flex justify-content-between">
@@ -65,3 +210,5 @@
 
 
         </form>
+    </accordion-group>
+</accordion>

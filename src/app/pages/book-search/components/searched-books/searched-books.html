@@ -1,42 +1,52 @@
-
-        <div class="p-4">
-            <div class="sorting text-end me-5 mb-4">
-                <div class="btn-group " dropdown>
-                    <button id="button-animated" dropdownToggle type="button"
-                        class="btn btn-light dropdown-toggle dropdown-center" aria-controls="dropdown-animated">
-                        Relevence <span class="caret"></span>
-                    </button>
-                    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-center" role="menu"
-                        aria-labelledby="button-animated">
-                        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-                        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li role="menuitem"><a class="dropdown-item" href="#">Something else
-                                here</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col" *ngFor="let book of books">
-                    <div class="card h-100">
-                        <img [src]="book.image" class="card-img-top" alt="{{book.title}}">
-                        <div class="card-body">
-                            <p class="card-title fw-bold">{{ book.title }}</p>
-                            <p class="card-text text-secondary text-uppercase">{{ book.author }}</p>
-                            <span class="badge text-uppercase" [ngClass]="book.availability === 'Available' ? 'text-bg-dark' : 'text-bg-danger'">{{ book.availability }}</span>
-                            <p class="card-text text-secondary mb-0">
-                                <small><i class="bi bi-book-half"></i> {{ book.genre }}</small>
-                            </p>
-                            <p class="card-text text-secondary mb-0">
-                                <small><i class="bi bi-geo-alt"></i> Section {{ book.section }}</small>
-                            </p>
-                            <p class="card-text text-secondary mb-0">
-                                <small><i class="bi bi-hash"></i> {{ book.bookNumber }}</small>
-                            </p>
-                            <button class="btn btn-outline-danger w-100 mt-2" (click)="onBookDetails(book.title)">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<div class="p-4">
+    <div class="sorting d-flex justify-content-between align-items-start mb-4 me-5">
+        <!-- Search Result Info -->
+        <div class="text-start">
+            <h4 class="fw-bold">Search Results</h4>
+            <p class="text-secondary">Found 10 books</p>
         </div>
+
+        <!-- Sort Dropdown -->
+        <div class="btn-group" dropdown>
+            <button id="sortButton" dropdownToggle type="button" class="btn btn-light dropdown-toggle"
+                aria-controls="sortDropdown">
+                Relevance
+            </button>
+
+            <ul id="sortDropdown" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="sortButton">
+                <li role="menuitem"><a class="dropdown-item" href="#">Relevance</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Newest First</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Oldest First</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Alphabetical A-Z</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Alphabetical Z-A</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let book of books">
+            <div class="card h-100">
+                <img [src]="book.image" class="card-img-top" alt="{{book.title}}">
+                <div class="card-body">
+                    <p class="card-title fw-bold">{{ book.title }}</p>
+                    <p class="card-text text-secondary text-uppercase">{{ book.author }}</p>
+                    <span class="badge text-uppercase"
+                        [ngClass]="book.availability === 'Available' ? 'text-bg-dark' : 'text-bg-danger'">{{
+                        book.availability }}</span>
+                    <p class="card-text text-secondary mb-0">
+                        <small><i class="bi bi-book-half"></i> {{ book.genre }}</small>
+                    </p>
+                    <p class="card-text text-secondary mb-0">
+                        <small><i class="bi bi-geo-alt"></i> Section {{ book.section }}</small>
+                    </p>
+                    <p class="card-text text-secondary mb-0">
+                        <small><i class="bi bi-hash"></i> {{ book.bookNumber }}</small>
+                    </p>
+                    <button class="btn btn-outline-danger w-100 mt-2" (click)="onBookDetails(book.title)">View
+                        Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

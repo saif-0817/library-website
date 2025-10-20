@@ -4,6 +4,8 @@ import { Home } from './pages/home/home';
 import { BookSearch } from './pages/book-search/book-search';
 import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
+import { Admin } from './pages/admin/admin';
+import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
    {
@@ -18,6 +20,8 @@ export const routes: Routes = [
          { path: 'books/:bookdetails', component: BookSearch },
          
       ],
-   }
+   },
+     { path: 'admin', component: Admin },
+     { path: 'dashboard', component: Dashboard },
 ];
 
