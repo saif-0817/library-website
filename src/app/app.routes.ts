@@ -6,6 +6,8 @@ import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
 import { Admin } from './pages/admin/admin';
 import { Dashboard } from './pages/dashboard/dashboard';
+import { dashboardRoute } from './pages/dashboard/dashbaord.routes';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
    {
@@ -20,8 +22,16 @@ export const routes: Routes = [
          { path: 'books/:bookdetails', component: BookSearch },
          
       ],
-   },
-     { path: 'admin', component: Admin },
-     { path: 'dashboard', component: Dashboard },
+   }, { path: 'admin', component: Admin },
+     {
+    path: 'dashboard',
+    canActivate:[authGuard],
+    loadComponent: () =>
+      import('./pages/dashboard/dashboard').then(
+        (m) => m.Dashboard
+      ),
+      children:[...dashboardRoute]
+  },
+    
 ];
 

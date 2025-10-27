@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Auth } from './pages/admin/auth';
 
 
 
@@ -11,4 +12,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('book-search');
+   constructor(private authService: Auth) {}
+
+  ngOnInit() {
+    this.authService.autoLogin();
+  }
 }
