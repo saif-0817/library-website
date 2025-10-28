@@ -17,7 +17,6 @@ export class Admin {
     }
 
     this.authService.signIn(form.value.email, form.value.password);
-    form.reset();
       console.log(form);
      
   }

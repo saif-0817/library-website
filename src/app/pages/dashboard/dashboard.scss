@@ -1,0 +1,11 @@
+.navbar-toggler-icon {
+
+    height: 2em;
+    width: 2em;
+}
+
+:host::ng-deep .active{
+    background:rgb(248 249 250);
+    color: black;
+    font-weight: 600;
+}

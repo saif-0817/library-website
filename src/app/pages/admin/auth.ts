@@ -34,7 +34,7 @@ export class Auth {
         this.router.navigate(['/dashboard']);
       },
       (err) => {
-        console.log(err);
+         console.error('Login failed:', err.error.error.message);
       }
     );
 }
@@ -49,7 +49,7 @@ export class Auth {
 
     }
 
-    const expirationTime = + new Date(loggedUser.expiresIn).getTime();
+    const expirationTime = new Date(loggedUser.expiresIn).getTime();
     const currentTime = Date.now();
 
     if (currentTime >= expirationTime) {

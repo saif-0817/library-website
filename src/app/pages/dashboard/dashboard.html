@@ -1,42 +1,49 @@
-<div class="offcanvas offcanvas-start show position-fixed border-0 bg-body-tertiary" tabindex="-1" id="offcanvasDark"
-    [collapse]="isCollapsed">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title fw-bold text-uppercase" id="offcanvasDarkLabel">CITY LIBRARY</h5>
-        <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"
-            (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-            aria-controls="collapseBasic"></button>
-    </div>
+   <nav class="navbar bg-primary border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
+                    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <div class="offcanvas-body px-0 pt-0">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item py-2">An item</li>
-               <li class="list-group-item py-2">An item</li>
-                  <li class="list-group-item py-2">An item</li>
-                     <li class="list-group-item py-2">An item</li>
-                        <li class="list-group-item py-2">An item</li>
-                           <li class="list-group-item py-2">An item</li>
-        </ul>
-    </div>
-</div>
-<div class="container-fluid ">
+                <a class="navbar-brand fw-bold mx-auto" href="#">DASHBOARD</a>
+                
 
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-                aria-controls="collapseBasic">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="btn btn-light" (click)="logout()">Logout</a>
+            </div>
+        </nav>
+
+<div class="row g-0">
+    <div [ngClass]="isCollapsed? 'col-0': 'col-2'">
+        <div class="postion-fixed vh-100 border-end border-info" tabindex="-1" id="offcanvasDark"
+            [collapse]="isCollapsed">
           
 
+            <div class="offcanvas-body px-0 pt-0">
+                <div class="list-group rounded-0 list-group-flush">
+                    <button routerLink="add-book"  type="button"
+                        class="list-group-item list-group-item-action" routerLinkActive="active">ADD BOOKS</button>
+                    <button  type="button" class="list-group-item list-group-item-action"  routerLink="view-books"  routerLinkActive="active">VIEW BOOKS</button>
+                    <button  routerLink="delete-book" type="button" class="list-group-item list-group-item-action"  routerLinkActive="active"
+                       >DELETE BOOKS</button>
+                    <button routerLink="issued-book" type="button" class="list-group-item list-group-item-action"  routerLinkActive="active">ISSUED BOOKS</button>
+                    <button type="button" class="list-group-item list-group-item-action" routerLink="due-books"  routerLinkActive="active">DUE BOOKS</button>
+                    <button type="button" class="list-group-item list-group-item-action" routerLink="members"  routerLinkActive="active">MEMBERS</button>
+                    <button type="button" class="list-group-item list-group-item-action" routerLink="add-member"  routerLinkActive="active">ADD MEMBER</button>
+                    <button type="button" class="list-group-item list-group-item-action" >COLLECT FINE</button>
+                    <button type="button" class="list-group-item list-group-item-action">REPORTS</button>
+                    <button type="button" class="list-group-item list-group-item-action">SETTINGS</button>
+                    <button type="button" class="list-group-item list-group-item-action">LOGOUT</button>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <div class="p-4">
+    </div>
+    <div [ngClass]="isCollapsed? 'col-12': 'col-10'">
+     
         <!-- Angular router outlet -->
-        <router-outlet></router-outlet>
+        <div class="p-4">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
-

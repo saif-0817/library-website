@@ -1,0 +1,22 @@
+<div class="card rounded-0">
+  <div id="searchMember" class="d-flex justify-content-between align-items-center p-3">
+    <h4 class="fw-bold m-0">MEMBERS</h4>
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search members..."
+      aria-label="Search Members"
+    />
+  </div>
+
+  <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [columns]="columns"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [limit]="10"
+    rowHeight="auto"
+    [columnMode]="'force'"
+  ></ngx-datatable>
+</div>

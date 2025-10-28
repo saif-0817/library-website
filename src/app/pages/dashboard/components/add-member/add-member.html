@@ -1,0 +1,71 @@
+<div class="card shadow-sm rounded-1 p-2 pb-4">
+    <form class="row g-3 p-3 rounded-0 h-100">
+
+        <!-- Full Name -->
+        <div class="col-md-6">
+            <label for="fName" class="form-label fw-bold">FIRST NAME</label>
+            <input type="text" class="form-control rounded-0" id="fName" required>
+        </div>
+        <div class="col-md-6">
+            <label for="lName" class="form-label fw-bold">LAST NAME</label>
+            <input type="text" class="form-control rounded-0" id="lName" required>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6">
+            <label for="phNo" class="form-label fw-bold">PHONE NO.</label>
+            <input type="tel" class="form-control rounded-0" id="phNo" required>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label fw-bold">EMAIL</label>
+            <input type="email" class="form-control rounded-0" id="email">
+        </div>
+
+        <!-- Personal Info -->
+        <div class="col-md-6">
+            <label for="dob" class="form-label fw-bold">DATE OF BIRTH</label>
+            <input type="date" class="form-control rounded-0" id="dob">
+        </div>
+        <!-- Profile Image -->
+        <div class="col-md-6">
+            <label for="profileImg" class="form-label fw-bold">PROFILE IMAGE</label>
+            <input type="file" class="form-control rounded-0" id="profileImg" accept="image/*">
+        </div>
+        <!-- Address -->
+        <div class="col-md-12">
+            <label for="address" class="form-label fw-bold">ADDRESS</label>
+            <textarea rows="3" id="address" class="form-control rounded-0"></textarea>
+        </div>
+        <div class="col-md-6">
+            <label for="city" class="form-label fw-bold">CITY</label>
+            <input type="text" class="form-control rounded-0" id="city" required>
+        </div>
+        <div class="col-md-6">
+            <label for="state" class="form-label fw-bold">STATE</label>
+            <input type="text" class="form-control rounded-0" id="state" required>
+        </div>
+        <div class="col-md-6">
+            <label for="pinCode" class="form-label fw-bold">PIN CODE</label>
+            <input type="text" class="form-control rounded-0" id="pinCode" required>
+        </div>
+        <!-- Membership Details -->
+        <div class="col-md-6">
+            <label for="membershipType" class="form-label fw-bold">MEMBERSHIP TYPE</label>
+            <select id="membershipType" class="form-select rounded-0">
+                <option value="">Select Type</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="student">Student</option>
+            </select>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="col-12">
+            <div class="d-flex gap-2 justify-content-end mt-2">
+                <button type="submit" class="btn btn-success px-4">ADD</button>
+                <button type="button" class="btn btn-danger px-4">CANCEL</button>
+                <button type="reset" class="btn btn-dark px-4">CLEAR</button>
+            </div>
+        </div>
+    </form>
+</div>
