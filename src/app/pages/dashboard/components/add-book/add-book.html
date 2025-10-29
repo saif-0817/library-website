@@ -1,63 +1,63 @@
-<div class="card shadow-sm rounded-1  p-2 pb-4">
-    <form class="row g-3 p-3 rounded-0 h-100">
+<div class="card shadow-sm p-2 pb-4">
+    <form class="row g-3 p-3  h-100 text-secondary">
 
         <div class="col-md-6">
-            <label for="title" class="form-label fw-bold">TITLE</label>
-            <input type="text" class="form-control rounded-0" id="title">
+            <label for="title" class="form-label fw-bold ">TITLE</label>
+            <input type="text" class="form-control " id="title">
         </div>
         <div class="col-md-6">
             <label for="author" class="form-label fw-bold">AUTHOR</label>
-            <input type="text" class="form-control rounded-0" id="author">
+            <input type="text" class="form-control " id="author">
         </div>
         <div class="col-md-6">
             <label for="genre" class="form-label fw-bold">GENRE</label>
-            <select id="genre" class="form-select rounded-0">
+            <select id="genre" class="form-select ">
                 <option selected>Choose...</option>
                 <option>...</option>
             </select>
         </div>
         <div class="col-6">
             <label for="isbn" class="form-label fw-bold">ISBN</label>
-            <input type="text" class="form-control rounded-0" id="isbn">
+            <input type="text" class="form-control " id="isbn">
         </div>
         <div class="col-6">
             <label for="price" class="form-label fw-bold">PRICE</label>
-            <input type="number" class="form-control rounded-0" id="price">
+            <input type="number" class="form-control " id="price">
         </div>
         <div class="col-md-6">
             <label for="quantity" class="form-label fw-bold">QUANTITY</label>
-            <input type="number" class="form-control rounded-0" id="quantity">
+            <input type="number" class="form-control " id="quantity">
         </div>
         <div class="col-md-6">
             <label for="coverImg" class="form-label fw-bold">COVER IMAGE</label>
-            <input type="file" class="form-control rounded-0" id="coverImg"  multiple accept="image/*">
+            <input type="file" class="form-control " id="coverImg"  multiple accept="image/*">
         </div>
         <div class="col-md-6">
             <label for="language" class="form-label fw-bold">LANGUAGE</label>
-            <ng-multiselect-dropdown class="form-control rounded-0" [placeholder]="'Select Languages'"
+            <ng-multiselect-dropdown class="form-control " [placeholder]="'Select Languages'"
                 [settings]="dropdownSettings" [data]="dropdownList" (onSelect)="onItemSelect($event)"
                 (onSelectAll)="onSelectAll($event)">
             </ng-multiselect-dropdown>
         </div>
         <div class="col-md-12">
             <label for="description" class="form-label fw-bold">DESCRIPTION</label>
-            <textarea rows="3" id="description" class="form-control rounded-0"></textarea>
+            <textarea id="description" class="form-control "></textarea>
         </div>
         <div class="col-md-6">
             <label for="publisher" class="form-label fw-bold">PUBLISHER</label>
-            <input type="text" class="form-control rounded-0" id="publisher">
+            <input type="text" class="form-control " id="publisher">
         </div>
         <div class="col-md-6">
             <label for="publicDate" class="form-label fw-bold">PUBLICATION DATE</label>
-            <input type="date" class="form-control rounded-0" id="publicDate">
+            <input type="date" class="form-control " id="publicDate">
         </div>
         <div class="col-md-6">
             <label for="pageCount" class="form-label fw-bold">PAGE COUNT</label>
-            <input type="number" class="form-control rounded-0" id="pageCount">
+            <input type="number" class="form-control " id="pageCount">
         </div>
         <div class="col-md-6">
             <label for="edition" class="form-label fw-bold">EDITION</label>
-            <input type="number" class="form-control rounded-0" id="edition">
+            <input type="number" class="form-control " id="edition">
         </div>
         <div class="col-12">
             <div class="d-flex gap-2 justify-content-end mt-2">

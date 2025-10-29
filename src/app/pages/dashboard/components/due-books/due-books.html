@@ -1,1 +1,22 @@
-<p>due-books works!</p>
+<div class="card rounded-0">
+  <div id="searchMember" class="d-flex justify-content-between align-items-center p-2 bg-primary ">
+    <h4 class="fw-bold m-0 text-white">DUE BOOKS</h4>
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search members..."
+      aria-label="Search Members"
+    />
+  </div>
+
+  <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [columns]="columns"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [limit]="8"
+    rowHeight="auto"
+    [columnMode]="'force'"
+  ></ngx-datatable>
+</div>

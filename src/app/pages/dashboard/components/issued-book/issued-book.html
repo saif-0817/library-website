@@ -1,44 +1,22 @@
+<div class="card rounded-0">
+  <div id="searchMember" class="d-flex justify-content-between align-items-center p-2 bg-primary">
+    <h4 class="fw-bold m-0 text-white">ISSUED BOOKS</h4>
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search members..."
+      aria-label="Search Members"
+    />
+  </div>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
-    </tr>
-  </tbody>
-</table>
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+  <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [columns]="columns"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [limit]="10"
+    rowHeight="auto"
+    [columnMode]="'force'"
+  ></ngx-datatable>
+</div>

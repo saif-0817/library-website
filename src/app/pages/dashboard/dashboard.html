@@ -1,14 +1,14 @@
    <nav class="navbar bg-primary border-body" data-bs-theme="dark">
             <div class="container-fluid">
             
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
                     [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon text-white"></span>
                 </button>
 
-                <a class="navbar-brand fw-bold mx-auto" href="#">DASHBOARD</a>
+                <a class="navbar-brand fw-bold mx-auto text-white opacity-100" href="#">DASHBOARD</a>
                 
 
             </div>
@@ -16,12 +16,12 @@
 
 <div class="row g-0">
     <div [ngClass]="isCollapsed? 'col-0': 'col-2'">
-        <div class="postion-fixed vh-100 border-end border-info" tabindex="-1" id="offcanvasDark"
+        <div class="postion-fixed vh-100 border-end " tabindex="-1" id="offcanvasDark"
             [collapse]="isCollapsed">
           
 
-            <div class="offcanvas-body px-0 pt-0">
-                <div class="list-group rounded-0 list-group-flush">
+            <div class="offcanvas-body px-0 pt-0 ">
+                <div class="list-group rounded-0 list-group-flush pt-1">
                     <button routerLink="add-book"  type="button"
                         class="list-group-item list-group-item-action" routerLinkActive="active">ADD BOOKS</button>
                     <button  type="button" class="list-group-item list-group-item-action"  routerLink="view-books"  routerLinkActive="active">VIEW BOOKS</button>

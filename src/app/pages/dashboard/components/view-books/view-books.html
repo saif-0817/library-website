@@ -1,29 +1,19 @@
-<div class="row d-flex justify-content-center vh-100">
-    <div class="col-6">
-        <div class="card">
-            <form action="">
-                <div class="card rounded-1  p-2 pb-4">
-                    <form class="row g-4 p-3 rounded-0 h-100">
-                        <div class="col-md-12">
-                            <label for="genre" class="form-label fw-bold">GENRE</label>
-                            <select id="genre" class="form-select rounded-0">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label for="isbn" class="form-label fw-bold">ISBN</label>
-                            <input type="text" class="form-control rounded-0" id="isbn">
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex gap-2 justify-content-center mt-2">
-                                <button type="submit" class="btn btn-success px-4">FIND BOOKS</button>
-                               
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="card rounded-0">
+  <div id="searchMember" class="d-flex justify-content-between align-items-center p-2 bg-primary">
+    <h4 class="fw-bold m-0 text-white">BOOKS</h4>
+    <input type="search" class="form-control rounded-0" placeholder="Search Books..." aria-label="Search Books" />
+  </div>
+
+ <ngx-datatable (activate)="onClickRow($event)"
+  class="material"
+  [rows]="rows"
+  [columns]="columns"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [limit]="10"
+  [columnMode]="'force'"
+   [rowHeight]="50"
+  [scrollbarV]="true"
+  [scrollbarH]="true">
+</ngx-datatable>
 </div>
